@@ -63,6 +63,21 @@ bridge.call("setLedState", False)
 ```
 - Envoie une commande au STM32 pour éteindre la LED au démarrage.
 - Assure un état initial propre.
+- 
+## 🟦 5. Callback de détection de personne
+
+```python
+def on_person_detected():
+    global last_detection_time
+
+```
+Fonction appelée automatiquement quand une personne est détectée.
+
+```python
+    last_detection_time = time.time()
+
+```
+
 
 ```python
 # code ici
@@ -76,3 +91,16 @@ bridge.call("setLedState", False)
 ```python
 # code ici
 ```
+```python
+# code ici
+```
+```python
+# code ici
+```
+```python
+# code ici
+```
+```python
+# code ici
+```
+
