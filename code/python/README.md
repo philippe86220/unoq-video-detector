@@ -96,8 +96,8 @@ Fonction appelée automatiquement quand une personne est détectée.
     bridge.call("setLedState", True)
 
 ```
-Allume la LED côté STM32.
-Grâce au sketch .ino, True = LED ON.
+- Allume la LED côté STM32.
+- Grâce au sketch .ino, True = LED ON.
 
 ```python
     print("LED ON")
