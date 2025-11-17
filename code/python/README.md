@@ -215,4 +215,4 @@ Voici ce que fait l’ensemble :
 
 ## Vue sortie console côté python :
 
-![App](Assets/arduino-console-python.png)
+![code](Assets/arduino-console-python.png)
