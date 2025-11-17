@@ -196,7 +196,7 @@ App.run()
   - la caméra tourne,
   - la détection tourne,
   - le thread led_watcher tourne en parallèle.
-  - 
+    
 ---
 
 ## 🟩 Résumé global  
