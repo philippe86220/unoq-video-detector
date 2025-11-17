@@ -193,7 +193,20 @@ permet, dans la console STM32 d’App Lab, de voir chaque appel :
 ---
 
 4. `setup()`
+```cpp
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  digitalWrite(ledPin, HIGH);
 
+  Bridge.begin();
+  Monitor.begin();
+
+  Bridge.provide("setLedState", setLedState);
+
+  Monitor.println("[C++] STM32 prêt, Bridge initialisé");
+}
+
+```
 Détail ligne par ligne :
 pinMode(ledPin, OUTPUT);
 Configure la broche de la LED en sortie.
@@ -221,7 +234,12 @@ que le sketch a bien démarré et que le Bridge est initialisé.
 ---
 
 5. `loop()`
+```cpp
+void loop() {
+  delay(10);
+}
 
+```
 La boucle principale ne fait rien d’actif.
 Tout le travail est déclenché par :
 les messages venant du cœur Linux via Bridge,
@@ -240,6 +258,4 @@ false → LED éteinte.
 Laisse la logique “intelligente” au cœur Linux (détection vidéo, temporisation 10 s, etc.).
 Sert de pont simple vers le matériel : la LED BUILTIN de la UNO Q.
 
-```cpp
 
-```
