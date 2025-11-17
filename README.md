@@ -47,7 +47,25 @@ Une fois validé, vous accédez à l’interface principale.
 Cliquer sur My Apps (barre de gauche)  
 ![App](Assets/app-lab-myapps.png)
 
-Cliquer sur Create New App +
-Donner un nom, par exemple :
-unoQ-video-detector
-L’arborescence du projet contient automatiquement :
+Cliquer sur Create New App +  
+Donner un nom, par exemple :  
+unoQ-video-detector  
+L’arborescence du projet contient automatiquement :  
+
+- python/main.py
+- sketch/sketch.ino  
+
+## 🧱 4. Ajouter le Brick "Video Object Detection"
+Cliquer sur Add (+) 
+Choisir Video Object Detection 
+Cliquer sur Create 
+![App](Assets/app-lab-add-brick.png)
+![App](Assets/app-lab-brick-added.png)
+📸 Assets/app-lab-add-brick.png
+📸 Assets/app-lab-brick-added.png
+Ce Brick fournit automatiquement :
+le container Linux EdgeImpulse
+l’API de détection VideoObjectDetection en Python
+la gestion du flux vidéo USB
+Aucune configuration supplémentaire n’est nécessaire.
+
