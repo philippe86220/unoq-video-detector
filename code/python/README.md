@@ -195,7 +195,7 @@ App.run()
 - Cette fonction est bloquante :
   - la caméra tourne,
   - la détection tourne,
-  - le thread led_watcher tourne en parallèle.
+  - le thread `led_watcher` tourne en parallèle.
     
 ---
 
