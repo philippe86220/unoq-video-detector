@@ -55,9 +55,15 @@ last_detection_time = 0
 - Stocke le moment où une personne a été vue pour la dernière fois.
 - Sert à éteindre la LED après 10 secondes sans détection.
 
+## 🟦 4. On force la LED à OFF au lancement
+
 ```python
-# code ici
+bridge.call("setLedState", False)
+
 ```
+- Envoie une commande au STM32 pour éteindre la LED au démarrage.
+- Assure un état initial propre.
+
 ```python
 # code ici
 ```
