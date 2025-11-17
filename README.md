@@ -140,8 +140,8 @@ threading.Thread(target=led_watcher, daemon=True).start()
 App.run()
 ```
 📸 Capture console Python :
-Assets/python-console-run.png
 
+![App](Assets/python-console-run.png)
 
 
 
