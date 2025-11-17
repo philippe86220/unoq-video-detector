@@ -98,7 +98,7 @@ Grâce au sketch .ino, True = LED ON.
 - Confirme l’allumage dans la console.
 ---
 
-🟦 6. Enregistrement du callback pour "person"
+## 🟦 6. Enregistrement du callback pour "person"
 
 ```python
 detector.on_detect("person", on_person_detected)
@@ -107,15 +107,16 @@ detector.on_detect("person", on_person_detected)
 Informe l'API vidéo :
 « Quand tu vois une personne, appelle on_person_detected() »
 
----
+--- 
 
-🟦 7. Callback générique pour loguer toutes les détections
+## 🟦 7. Callback générique pour loguer toutes les détections
 
 ```python
 def on_all_detections(detections: dict):
     print("All detections:", detections)
 
 ```
+## 🟦 8. Thread de surveillance de la LED
 ```python
 # code ici
 ```
