@@ -164,7 +164,7 @@ Journal dans la console.
 
 ---
 
-# 🟦 9. Lancement du thread
+## 🟦 9. Lancement du thread
 ```python
 threading.Thread(target=led_watcher, daemon=True).start()
 
@@ -174,9 +174,15 @@ threading.Thread(target=led_watcher, daemon=True).start()
 
   ---
 
- # 🟦 10. Lancement de l’application UNO Q
+ ## 🟦 10. Lancement de l’application UNO Q
 
 ```python
 App.run()
 
 ```
+- Démarre la boucle principale App Lab.
+- Cette fonction est bloquante :
+  -la caméra tourne,
+  -la détection tourne,
+  -le thread led_watcher tourne en parallèle.
+
