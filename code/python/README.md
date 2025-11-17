@@ -24,7 +24,7 @@ import time
 
 ```
 - threading : lance un thread séparé pour surveiller l’état de la LED.
-- time : mesure le temps (time.time()) et fait des pauses (time.sleep()).
+- time : mesure le temps (`time.time()`) et fait des pauses (`time.sleep()`).
   
 ---
 
@@ -97,7 +97,7 @@ Fonction appelée automatiquement quand une personne est détectée.
 
 ```
 - Allume la LED côté STM32.
-- Grâce au sketch .ino, True = LED ON.
+- Grâce au sketch `.ino`, `True` = LED ON.
 
 ```python
     print("LED ON")
@@ -114,7 +114,7 @@ detector.on_detect("person", on_person_detected)
 
 ```
 Informe l'API vidéo :
-> « Quand tu vois une personne, appelle on_person_detected() »
+> « Quand tu vois une personne, appelle `on_person_detected()` »
 
 --- 
 
@@ -180,8 +180,8 @@ Journal dans la console.
 threading.Thread(target=led_watcher, daemon=True).start()
 
 ```
-- Lance led_watcher() dans un thread à part.
-- daemon=True : s’arrête automatiquement lorsque l’application se termine.
+- Lance `led_watcher()` dans un thread à part.
+- `daemon=True` : s’arrête automatiquement lorsque l’application se termine.
 
 ---
 
