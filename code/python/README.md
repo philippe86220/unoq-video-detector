@@ -203,9 +203,9 @@ App.run()
 Voici ce que fait l’ensemble :
 ### 🎥 1. La brique VideoObjectDetection lit le flux vidéo
 ➡️ détecte "person".
-### 💡 2. on_person_detected() est appelé
+### 💡 2. `on_person_detected()` est appelé
 ➡️ met à jour le timer,  
-➡️ allume la LED par bridge.call().
+➡️ allume la LED par `bridge.call()`.
 ### 🕒 3. Un thread surveille les 10 secondes d'inactivité
 ➡️ si aucune personne vue → LED OFF.
 ### 🔗 4. Le Bridge fait le lien
