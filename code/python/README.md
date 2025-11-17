@@ -47,6 +47,8 @@ Crée l’instance de détection vidéo :
 - confidence=0.4 : seuil minimum (40%) pour valider une détection.
 - debounce_sec=1.0 : délai minimum entre deux détections du même type pour éviter les spams.
 
+## 🟦 3. Variables globales pour la logique interne
+
 ```python
 last_detection_time = 0
 ```
