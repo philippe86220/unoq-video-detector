@@ -85,8 +85,10 @@ Fonction appelée automatiquement quand une personne est détectée.
 - Affichage dans la console Python (utile pour debug).
 
 ```python
-# code ici
+    bridge.call("setLedState", True)
+
 ```
+
 ```python
 # code ici
 ```
