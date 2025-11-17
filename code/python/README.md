@@ -26,14 +26,16 @@ import time
 - threading : lance un thread séparé pour surveiller l’état de la LED.
 - time : mesure le temps (time.time()) et fait des pauses (time.sleep()).
 
-
-
-
-
+ ## 🟦 2. Initialisation des objets principaux
 
 ```python
-# code ici
+bridge = Bridge()
+
 ```
+Initialise la communication Linux → STM32.
+Permet d’appeler la fonction C++ fournie par le sketch via :
+
+
 ```python
 # code ici
 ```
