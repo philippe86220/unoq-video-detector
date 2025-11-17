@@ -14,5 +14,22 @@ Tout fonctionne sans code HTML, uniquement via :
 
 ---
 
-🔧 1. Matériel utilisé
+## 🔧 1. Matériel utilisé
 Placez le matériel comme ci-dessous :
+![Materiel](Assets/hardware-setup.png)
+
+**Liste du matériel**   
+- Arduino UNO Q
+- Webcam USB compatible Linux
+- HUB USB-C (avec Power Delivery + USB-A)
+- Câble USB-C ↔ USB-C
+- Alimentation 5V / USB-C PD
+
+## 📡 2. Connexion de la UNO Q à Arduino App Lab  
+### 2.1. Brancher d’abord le matériel
+➡️ La UNO Q s’allume  
+➡️ Le hub alimente la caméra  
+➡️ L’ensemble va être détecté par App Lab via Wi-Fi  
+
+### 2.2. Lancer Arduino App Lab
+L’icône Wi-Fi apparaît automatiquement.
