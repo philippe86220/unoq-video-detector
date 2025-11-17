@@ -32,19 +32,27 @@ import time
 bridge = Bridge()
 
 ```
-Initialise la communication Linux → STM32.
-Permet d’appeler la fonction C++ fournie par le sketch via :
+- Initialise la communication Linux → STM32.  
+- Permet d’appeler la fonction C++ fournie par le sketch via :
 
+```python
+bridge.call("setLedState", True)
+```
 
 ```python
-# code ici
+detector = VideoObjectDetection(confidence=0.4, debounce_sec=1.0)
+
 ```
+Crée l’instance de détection vidéo :
+- confidence=0.4 : seuil minimum (40%) pour valider une détection.
+- debounce_sec=1.0 : délai minimum entre deux détections du même type pour éviter les spams.
+
 ```python
-# code ici
+last_detection_time = 0
 ```
-```python
-# code ici
-```
+- Stocke le moment où une personne a été vue pour la dernière fois.
+- Sert à éteindre la LED après 10 secondes sans détection.
+
 ```python
 # code ici
 ```
