@@ -140,20 +140,43 @@ Boucle infinie tant que l'application tourne.
 
 ```python
         now = time.time()
+```
+- Récupère l’heure actuelle.
+
+```python
+        if now - last_detection_time > 10:
 
 ```
+- Plus de 10 secondes sans détection → il faut éteindre la LED.
 ```python
+            bridge.call("setLedState", False)
+            print("LED OFF (10 s sans personne)")
 
 ```
+Extinction physique de la LED côté STM32.
+Journal dans la console.
 ```python
+        time.sleep(0.5)
 
 ```
+- Vérifie toutes les 500 ms.
+- Évite de gaspiller du CPU.
+
+---
+
+# 🟦 9. Lancement du thread
 ```python
+threading.Thread(target=led_watcher, daemon=True).start()
 
 ```
-```python
+- Lance led_watcher() dans un thread à part.
+- daemon=True : s’arrête automatiquement lorsque l’application se termine.
 
-```
+  ---
+
+ # 🟦 10. Lancement de l’application UNO Q
+
 ```python
+App.run()
 
 ```
