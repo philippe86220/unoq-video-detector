@@ -143,5 +143,23 @@ App.run()
 
 ![App](Assets/python-console-run.png)
 
+### ⚙️ 6. Code STM32 (cœur temps réel C++)
+📄 sketch/sketch.ino  
+Ce code :  
+- met la LED en sortie
+- enregistre la fonction setLedState()
+- reçoit les appels depuis Linux
+- imprime les messages dans la console STM32
+
+📸 Capture code C++ :
+![App](Assets/arduino-console-run.png)
+
+### 🎬 7. Lancement de l’application  
+
+- Cliquer sur Run dans App Lab
+- La caméra s’allume (LED blanche)
+- Le flux vidéo est traité par Edge Impulse sur le Linux
+- La détection déclenche la LED pendant 10 secondes
+
 
 
