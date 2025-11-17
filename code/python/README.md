@@ -25,6 +25,8 @@ import time
 ```
 - threading : lance un thread séparé pour surveiller l’état de la LED.
 - time : mesure le temps (time.time()) et fait des pauses (time.sleep()).
+  
+---
 
  ## 🟦 2. Initialisation des objets principaux
 
@@ -47,6 +49,8 @@ Crée l’instance de détection vidéo :
 - confidence=0.4 : seuil minimum (40%) pour valider une détection.
 - debounce_sec=1.0 : délai minimum entre deux détections du même type pour éviter les spams.
 
+---
+
 ## 🟦 3. Variables globales pour la logique interne
 
 ```python
@@ -54,6 +58,8 @@ last_detection_time = 0
 ```
 - Stocke le moment où une personne a été vue pour la dernière fois.
 - Sert à éteindre la LED après 10 secondes sans détection.
+
+---
 
 ## 🟦 4. On force la LED à OFF au lancement
 
@@ -63,7 +69,9 @@ bridge.call("setLedState", False)
 ```
 - Envoie une commande au STM32 pour éteindre la LED au démarrage.
 - Assure un état initial propre.
-- 
+
+---
+
 ## 🟦 5. Callback de détection de personne
 
 ```python
@@ -96,6 +104,7 @@ Grâce au sketch .ino, True = LED ON.
 
 ```
 - Confirme l’allumage dans la console.
+  
 ---
 
 ## 🟦 6. Enregistrement du callback pour "person"
@@ -124,6 +133,8 @@ Le paramètre detections contient par exemple :
 }
 
 ```
+---
+
 ## 🟦 8. Thread de surveillance de la LED
 ```python
 def led_watcher():
@@ -172,7 +183,7 @@ threading.Thread(target=led_watcher, daemon=True).start()
 - Lance led_watcher() dans un thread à part.
 - daemon=True : s’arrête automatiquement lorsque l’application se termine.
 
-  ---
+---
 
  ## 🟦 10. Lancement de l’application UNO Q
 
@@ -182,7 +193,20 @@ App.run()
 ```
 - Démarre la boucle principale App Lab.
 - Cette fonction est bloquante :
-  -la caméra tourne,
-  -la détection tourne,
-  -le thread led_watcher tourne en parallèle.
+  - la caméra tourne,
+  - la détection tourne,
+  - le thread led_watcher tourne en parallèle.
+  - 
+---
 
+## 🟩 Résumé global  
+Voici ce que fait l’ensemble :
+### 🎥 1. La brique VideoObjectDetection lit le flux vidéo
+➡️ détecte "person".
+### 💡 2. on_person_detected() est appelé
+➡️ met à jour le timer,  
+➡️ allume la LED par bridge.call().
+### 🕒 3. Un thread surveille les 10 secondes d'inactivité
+➡️ si aucune personne vue → LED OFF.
+### 🔗 4. Le Bridge fait le lien
+➡️ Linux → STM32 → LED_BUILTIN.
