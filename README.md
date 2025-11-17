@@ -19,7 +19,7 @@ Placez le matériel comme ci-dessous :
 ![Materiel](Assets/hardware-setup.png)
 
 **Liste du matériel**   
-- Arduino UNO Q
+- Arduino UNO Q - https://store.arduino.cc/products/uno-q
 - Webcam USB compatible Linux
 - HUB USB-C (avec Power Delivery + USB-A)
 - Câble USB-C ↔ USB-C
