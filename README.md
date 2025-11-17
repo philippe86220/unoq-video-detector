@@ -1,4 +1,7 @@
 # unoq-video-detector
+
+# 🎥 Arduino UNO Q — Détection vidéo et activation d’une LED pendant 10 secondes
+
 Détection vidéo + activation LED avec l’Arduino UNO Q
 Ce projet montre comment utiliser l’Arduino UNO Q, une webcam USB et Arduino App Lab 0.2.0 pour :
 - activer un pipeline de détection vidéo temps réel,
