@@ -33,3 +33,8 @@ Placez le matériel comme ci-dessous :
 
 ### 2.2. Lancer Arduino App Lab
 L’icône Wi-Fi apparaît automatiquement.
+![App](Assets/app-lab-wifi.png)
+
+### 2.3. Cliquer sur la UNO Q détectée
+App Lab affiche une boîte pour entrer le mot de passe Wi-Fi de la carte.
+![App](Assets/app-lab-login.png)
