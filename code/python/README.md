@@ -215,5 +215,5 @@ Voici ce que fait l’ensemble :
 
 ## Vue sortie console côté python :
 
-![arduino](Assets/arduino-console-python.png)
-![App](Assets/app-lab-wifi.png)
+![arduino](../../Assets/arduino-console-python.png)
+
