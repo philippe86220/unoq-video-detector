@@ -95,11 +95,16 @@ Grâce au sketch .ino, True = LED ON.
     print("LED ON")
 
 ```
+- Confirme l’allumage dans la console.
+---
 
+🟦 6. Enregistrement du callback pour "person"
 
 ```python
-# code ici
+detector.on_detect("person", on_person_detected)
+
 ```
+
 ```python
 # code ici
 ```
