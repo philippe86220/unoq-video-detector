@@ -116,14 +116,44 @@ def on_all_detections(detections: dict):
     print("All detections:", detections)
 
 ```
+Le paramètre detections contient par exemple :
+```python
+{
+  "person": {"confidence": 0.86, "bounding_box_xyxy": (x1, y1, x2, y2)},
+  "mouse":  {"confidence": 0.66, ...}
+}
+
+```
 ## 🟦 8. Thread de surveillance de la LED
 ```python
-# code ici
+def led_watcher():
+    global last_detection_time
 ```
-```python
-# code ici
-```
-```python
-# code ici
-```
+Thread séparé dont le rôle est :
+- surveiller le temps depuis la dernière détection,
+**- éteindre la LED après 10 secondes sans personne.**
 
+```python
+    while True:
+```
+Boucle infinie tant que l'application tourne.  
+
+```python
+        now = time.time()
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
