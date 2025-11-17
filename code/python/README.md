@@ -77,11 +77,13 @@ Fonction appelée automatiquement quand une personne est détectée.
     last_detection_time = time.time()
 
 ```
-
+- Met à jour le temps de dernière détection.
 
 ```python
-# code ici
+    print("🚨 Person detected in the video stream!")
 ```
+- Affichage dans la console Python (utile pour debug).
+
 ```python
 # code ici
 ```
