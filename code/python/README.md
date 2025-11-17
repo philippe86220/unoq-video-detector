@@ -114,7 +114,7 @@ detector.on_detect("person", on_person_detected)
 
 ```
 Informe l'API vidéo :
-« Quand tu vois une personne, appelle on_person_detected() »
+> « Quand tu vois une personne, appelle on_person_detected() »
 
 --- 
 
@@ -142,7 +142,7 @@ def led_watcher():
 ```
 Thread séparé dont le rôle est :
 - surveiller le temps depuis la dernière détection,
-**- éteindre la LED après 10 secondes sans personne.**
+- **éteindre la LED après 10 secondes sans personne.**
 
 ```python
     while True:
