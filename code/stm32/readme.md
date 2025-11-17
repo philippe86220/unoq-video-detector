@@ -134,3 +134,44 @@ void loop() {
   delay(10);
 }
 ```
+
+Explication détaillée
+1. Inclusions
+
+Arduino.h : en-tête classique Arduino (pinMode, digitalWrite, etc.).
+Arduino_RouterBridge.h : fournit :
+Bridge : canal de communication avec le cœur Linux ;
+Monitor : sortie texte (console) côté STM32 dans App Lab.
+
+---
+
+2. Définition de la broche LED
+
+
+LED_BUILTIN : constante fournie par le core, qui pointe vers la LED intégrée de la UNO Q.
+On la stocke dans ledPin pour plus de lisibilité.
+
+---
+
+3. Fonction setLedState(bool state)
+
+Cette fonction n’est jamais appelée directement dans loop().
+Elle est appelée par le cœur Linux via :
+bridge.call("setLedState", True) ou bridge.call("setLedState", False).
+Important : LED active LOW
+Sur la UNO Q, la LED est câblée de façon à ce que :
+LOW → LED allumée ;
+HIGH → LED éteinte.
+D’où le mapping :
+state == true → LOW → LED ON ;
+state == false → HIGH → LED OFF.
+Le bloc Monitor.print(...) :
+n’est là que pour le debug ;
+permet, dans la console STM32 d’App Lab, de voir chaque appel :
+[C++] setLedState(true)
+[C++] setLedState(false).
+
+---
+
+
+
