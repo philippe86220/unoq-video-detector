@@ -20,10 +20,9 @@ Placez le matériel comme ci-dessous :
 
 **Liste du matériel**   
 - Arduino UNO Q - https://store.arduino.cc/products/uno-q
-- Webcam USB compatible Linux
-- HUB USB-C (avec Power Delivery + USB-A)
-- Câble USB-C ↔ USB-C
-- Alimentation 5V / USB-C PD
+- Webcam USB compatible Linux - https://amzn.eu/d/iWSkrtM
+- HUB USB-C (avec Power Delivery + USB-A) - https://www.amazon.fr/dp/B0CF224WX9
+- Alimentation 5V / USB-C PD - j'utilise celle de mon Raspberry PI 4
 
 ## 📡 2. Connexion de la UNO Q à Arduino App Lab  
 ### 2.1. Brancher d’abord le matériel
