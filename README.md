@@ -38,3 +38,16 @@ L’icône Wi-Fi apparaît automatiquement.
 ### 2.3. Cliquer sur la UNO Q détectée
 App Lab affiche une boîte pour entrer le mot de passe Wi-Fi de la carte.
 ![App](Assets/app-lab-login.png)
+
+Une fois validé, vous accédez à l’interface principale.
+
+---
+
+## 🆕 3. Créer un nouveau projet App Lab
+Cliquer sur My Apps (barre de gauche)  
+![App](Assets/app-lab-myapps.png)
+
+Cliquer sur Create New App +
+Donner un nom, par exemple :
+unoQ-video-detector
+L’arborescence du projet contient automatiquement :
