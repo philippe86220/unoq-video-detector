@@ -264,4 +264,8 @@ On met un `delay(10);` très léger :
 - Laisse la logique “intelligente” au cœur Linux (détection vidéo, temporisation 10 s, etc.).
 - Sert de pont simple vers le matériel : la LED BUILTIN de la UNO Q.
 
+---
 
+## Vue sortie console côté STM32 :
+
+![arduino](../../Assets/arduino-console-STM32.png)
