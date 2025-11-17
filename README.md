@@ -47,8 +47,7 @@ Cliquer sur My Apps (barre de gauche)
 ![App](Assets/app-lab-myapps.png)
 
 Cliquer sur Create New App +  
-Donner un nom, par exemple :  
-unoQ-video-detector  
+Donner un nom, par exemple : unoQ-video-detector  
 L’arborescence du projet contient automatiquement :  
 
 - python/main.py
