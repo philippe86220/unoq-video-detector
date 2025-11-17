@@ -137,7 +137,9 @@ void loop() {
 
 Explication détaillée
 1. Inclusions
+```cpp
 
+```
 Arduino.h : en-tête classique Arduino (pinMode, digitalWrite, etc.).
 Arduino_RouterBridge.h : fournit :
 Bridge : canal de communication avec le cœur Linux ;
@@ -199,5 +201,28 @@ Monitor.println("[C++] STM32 prêt, Bridge initialisé");
 Petit message de bienvenue dans la console STM32, pratique pour vérifier
 que le sketch a bien démarré et que le Bridge est initialisé.
 
+---
 
+5. `loop()`
 
+La boucle principale ne fait rien d’actif.
+Tout le travail est déclenché par :
+les messages venant du cœur Linux via Bridge,
+c’est-à-dire les appels à setLedState(...).
+On met un delay(10); très léger :
+pour ne pas monopoliser inutilement le CPU,
+mais ici, même sans delay, le code fonctionnerait (la logique étant pilotée par les callbacks du Bridge).
+
+---
+
+Résumé du rôle du sketch
+Expose une seule API vers le Linux : setLedState(bool state).
+Interprète state avec une LED active LOW :
+true → LED allumée ;
+false → LED éteinte.
+Laisse la logique “intelligente” au cœur Linux (détection vidéo, temporisation 10 s, etc.).
+Sert de pont simple vers le matériel : la LED BUILTIN de la UNO Q.
+
+```cpp
+
+```
