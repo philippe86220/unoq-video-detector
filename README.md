@@ -76,6 +76,7 @@ Aucune configuration supplémentaire n’est nécessaire.
 
 ### 🐍 5. Code Python (cœur Linux)
 📄 python/main.py  
+
 Ce code :  
 - initialise la détection vidéo,
 - allume la LED lorsque quelqu’un est détecté,
@@ -146,6 +147,7 @@ App.run()
 
 ### ⚙️ 6. Code STM32 (cœur temps réel C++)
 📄 sketch/sketch.ino  
+
 Ce code :  
 - met la LED en sortie
 - enregistre la fonction setLedState()
