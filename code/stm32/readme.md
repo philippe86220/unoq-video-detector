@@ -176,19 +176,23 @@ void setLedState(bool state) {
 
 - Cette fonction n’est jamais appelée directement dans loop().
 - Elle est appelée par le cœur Linux via :
-bridge.call("setLedState", True) ou bridge.call("setLedState", False).
-Important : LED active LOW
-Sur la UNO Q, la LED est câblée de façon à ce que :
-LOW → LED allumée ;
-HIGH → LED éteinte.
-D’où le mapping :
-state == true → LOW → LED ON ;
-state == false → HIGH → LED OFF.
-Le bloc Monitor.print(...) :
-n’est là que pour le debug ;
-permet, dans la console STM32 d’App Lab, de voir chaque appel :
-[C++] setLedState(true)
-[C++] setLedState(false).
+`bridge.call("setLedState", True)` ou `bridge.call("setLedState", False)`.
+
+**Important : LED active LOW**
+
+- Sur la UNO Q, la LED est câblée de façon à ce que :
+  - LOW → LED allumée ;
+  - HIGH → LED éteinte.  
+- D’où le mapping :
+  - state == true → LOW → LED ON ;
+  - state == false → HIGH → LED OFF.
+
+Le bloc Monitor.print(...) : 
+
+- n’est là que pour le debug ;
+- permet, dans la console STM32 d’App Lab, de voir chaque appel :
+  - [C++] setLedState(true)
+  - [C++] setLedState(false).
 
 ---
 
