@@ -210,3 +210,8 @@ Voici ce que fait l’ensemble :
 ➡️ si aucune personne vue → LED OFF.
 ### 🔗 4. Le Bridge fait le lien
 ➡️ Linux → STM32 → LED_BUILTIN.
+
+---
+
+## Vue sortie console côté 
+
