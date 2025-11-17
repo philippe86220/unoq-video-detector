@@ -211,28 +211,28 @@ void setup() {
 }
 
 ```
-Détail ligne par ligne :
-pinMode(ledPin, OUTPUT);
-Configure la broche de la LED en sortie.
-digitalWrite(ledPin, HIGH);
-Comme la LED est active LOW, mettre la broche à HIGH l’éteint.
-On démarre donc avec la LED éteinte.
-Bridge.begin();
-Initialise le canal de communication entre :
-le cœur Linux (Python dans App Lab),
-le cœur STM32 (ce sketch).
-Sans ça, Bridge.provide et les bridge.call(...) côté Python ne fonctionneraient pas.
-Monitor.begin();
-Initialise la liaison “moniteur” côté STM32.
-Permet d’afficher des logs dans Arduino App Lab (console STM32).
-Bridge.provide("setLedState", setLedState);
-Enregistre la fonction C++ setLedState sous le nom "setLedState" pour le Bridge.
-Côté Python, on utilise exactement le même nom de chaîne :
-bridge.call("setLedState", True) → appelle cette fonction côté STM32.
-Si le nom ne correspond pas, on obtient une erreur du type :
-method setLedState not available.
-Monitor.println("[C++] STM32 prêt, Bridge initialisé");
-Petit message de bienvenue dans la console STM32, pratique pour vérifier
+Détail ligne par ligne :  
+#### 1. `pinMode(ledPin, OUTPUT);`
+- Configure la broche de la LED en **sortie**.
+#### 2. `digitalWrite(ledPin, HIGH);`
+- Comme la LED est active LOW, mettre la broche à HIGH l’éteint.
+- On démarre donc avec la LED éteinte.
+#### 3. `Bridge.begin();`
+- Initialise le canal de communication entre :
+  - le cœur Linux (Python dans App Lab),
+  - le cœur STM32 (ce sketch).
+- Sans ça, Bridge.provide et les bridge.call(...) côté Python ne fonctionneraient pas.
+#### 4. `Monitor.begin();`
+- Initialise la liaison “moniteur” côté STM32.
+- Permet d’afficher des logs dans Arduino App Lab (console STM32).
+#### 5. `Bridge.provide("setLedState", setLedState);`
+- Enregistre la fonction C++ setLedState sous le nom "setLedState" pour le Bridge.
+- Côté Python, on utilise exactement le même nom de chaîne :
+  - `bridge.call("setLedState", True)` → appelle cette fonction côté STM32.
+- Si le nom ne correspond pas, on obtient une erreur du type :
+  - `method setLedState not available`.
+#### 6. `Monitor.println("[C++] STM32 prêt, Bridge initialisé");`
+- Petit message de bienvenue dans la console STM32, pratique pour vérifier  
 que le sketch a bien démarré et que le Bridge est initialisé.
 
 ---
@@ -244,13 +244,13 @@ void loop() {
 }
 
 ```
-La boucle principale ne fait rien d’actif.
-Tout le travail est déclenché par :
-les messages venant du cœur Linux via Bridge,
-c’est-à-dire les appels à setLedState(...).
-On met un delay(10); très léger :
-pour ne pas monopoliser inutilement le CPU,
-mais ici, même sans delay, le code fonctionnerait (la logique étant pilotée par les callbacks du Bridge).
+- La boucle principale ne fait rien d’actif.
+- Tout le travail est déclenché par :
+  - les messages venant du cœur Linux via `Bridge`,
+  - c’est-à-dire les appels à `setLedState(...)`.
+On met un `delay(10);` très léger :  
+- pour ne pas monopoliser inutilement le CPU,
+- mais ici, même sans delay, le code fonctionnerait (la logique étant pilotée par les callbacks du Bridge).
 
 ---
 
