@@ -544,3 +544,6 @@ C’est un appel **bloquant** :
 
 Ce fichier constitue donc la **documentation détaillée** du comportement Python côté Linux dans ce projet.
 
+## Vue sortie console côté STM32 :
+
+![arduino](../../Assets/arduino-console-STM32.png)
