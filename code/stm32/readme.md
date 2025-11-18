@@ -73,7 +73,7 @@ void loop() {
 ```cpp
 #include <Arduino.h>
 #include <Arduino_RouterBridge.h>
-
+```
 
 - Arduino.h : en-tête classique Arduino (pinMode, digitalWrite, etc.).
 - Arduino_RouterBridge.h : fournit :
