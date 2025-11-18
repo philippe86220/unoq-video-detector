@@ -65,7 +65,7 @@ void loop() {
   // tout est déclenché par les appels Bridge (setLedState)
   delay(10);
 }
-
+```
 ---
 
 # Explication détaillée
@@ -74,7 +74,7 @@ void loop() {
 #include <Arduino.h>
 #include <Arduino_RouterBridge.h>
 
-```
+
 - Arduino.h : en-tête classique Arduino (pinMode, digitalWrite, etc.).
 - Arduino_RouterBridge.h : fournit :
   - Bridge : canal de communication avec le cœur Linux ;
