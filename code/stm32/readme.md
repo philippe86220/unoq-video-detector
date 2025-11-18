@@ -154,7 +154,7 @@ Détail ligne par ligne :
 - Initialise le canal de communication entre :
   - le cœur Linux (Python dans App Lab),
   - le cœur STM32 (ce sketch).
-- Sans ça, Bridge.provide et les bridge.call(...) côté Python ne fonctionneraient pas.
+- Sans ça, `Bridge.provide` et les `bridge.call(...)` côté Python ne fonctionneraient pas.
 #### 4. `Monitor.begin();`
 - Initialise la liaison “moniteur” côté STM32.
 - Permet d’afficher des logs dans Arduino App Lab (console STM32).
