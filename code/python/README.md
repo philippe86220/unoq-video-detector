@@ -42,12 +42,13 @@ bridge.call("setLedState", True)
 ```
 
 ```python
-detector = VideoObjectDetection(confidence=0.4, debounce_sec=1.0)
+video_detector = VideoObjectDetection(confidence=0.4, debounce_sec=1.5)
 
 ```
 Crée l’instance de détection vidéo :
 - confidence=0.4 : seuil minimum (40%) pour valider une détection.
-- debounce_sec=1.0 : délai minimum entre deux détections du même type pour éviter les spams.
+- debounce_sec=1.5 : anti-rebond temporel :
+  - évite de spammer le callback si la même chose est vue en continu (il attend 1,5 s entre deux callbacks pour le même objet).
 
 ---
 
