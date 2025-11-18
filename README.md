@@ -164,5 +164,11 @@ Ce code :
 - Le flux vidéo est traité par Edge Impulse sur le Linux
 - La détection déclenche la LED pendant 10 secondes
 
-
+# ℹ️ Informations
+Projet développé sur :  
+macOS Tahoe 26.0.1  
+Arduino App Lab 0.2.0  
+Arduino UNO Q  
+Webcam USB + hub USB-C  
+Projet réalisé en collaboration avec ChatGPT (OpenAI).  
 
