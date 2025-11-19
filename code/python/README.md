@@ -1,5 +1,4 @@
 # 🧠 Explication du code Python (UNO Q — Détection vidéo + LED)  
-# README – Code Python : détection vidéo et pilotage de la LED (UNO Q)
 
 Ce fichier décrit **ligne par ligne** le code Python utilisé dans `python/main.py` pour :
 
